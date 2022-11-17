@@ -80,7 +80,7 @@ if [ ! -f ${NET_FINAL}.index ]; then
       --set ANCHOR_SCALES ${ANCHORS} ANCHOR_RATIOS ${RATIOS} \
       TRAIN.STEPSIZE ${STEPSIZE} TRAIN.SNAPSHOT_PREFIX ${SNAPSHOT_PREFIX} ${EXTRA_ARGS}
   else
-    CUDA_VISIBLE_DEVICES=${GPU_ID} python /shared/home/c_sivarams/prog_da/DA_detection/tools/trainval_net_adapt.py \
+    CUDA_VISIBLE_DEVICES=${GPU_ID} python /tools/trainval_net_adapt.py \
       --weight trained_weights/pretrained_detector/${PRETRAINED_WEIGHT} \
       --imdb ${TRAIN_IMDB_S} \
       --imdbval ${TEST_IMDB} \
